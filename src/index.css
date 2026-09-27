@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+	--color-page: var(--bg);
+	--color-elevated: var(--bg-elevated);
+	--color-card: var(--bg-card);
+	--color-ink: var(--text);
+	--color-brand: var(--brand);
+	--color-brand-hover: var(--brand-hover);
+}
+
+:root,
+[data-theme="dark"] {
+	--bg: #070b14;
+	--bg-elevated: #0e1524;
+	--bg-card: #121a2b;
+	--text: #f8fafc;
+	--text-muted: #94a3b8;
+	--brand: #2563eb;
+	--brand-hover: #1d4ed8;
+	--hero-from: hsl(222, 60%, 18%);
+	--hero-mid: hsl(218, 65%, 28%);
+	--hero-to: hsl(222, 60%, 18%);
+	--hero-gradient: linear-gradient(to right, hsl(222, 60%, 18%) 0%, hsl(218, 65%, 28%) 50%, hsl(222, 60%, 18%) 100%);
+	--background: 222 47% 5%;
+	--card: 222 47% 8%;
+	--muted: 222 32% 15%;
+	--border: rgb(255 255 255 / 0.08);
+	--pill: #151c2e;
+	--shadow: 0 18px 40px rgb(0 0 0 / 0.28);
+}
+
+[data-theme="light"] {
+	--bg: #f4f6fb;
+	--bg-elevated: #ffffff;
+	--bg-card: #ffffff;
+	--text: #0f172a;
+	--text-muted: #475569;
+	--brand: #2563eb;
+	--brand-hover: #1d4ed8;
+	--hero-from: hsl(222, 60%, 18%);
+	--hero-mid: hsl(218, 65%, 28%);
+	--hero-to: hsl(222, 60%, 18%);
+	--hero-gradient: linear-gradient(to right, hsl(222, 60%, 18%) 0%, hsl(218, 65%, 28%) 50%, hsl(222, 60%, 18%) 100%);
+	--background: 220 20% 97%;
+	--card: 220 20% 98%;
+	--muted: 220 16% 92%;
+	--border: rgb(15 23 42 / 0.08);
+	--pill: #eef2ff;
+	--shadow: 0 18px 40px rgb(15 23 42 / 0.08);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background: hsl(var(--background));
+	color: var(--text);
+	font-family: var(--font-sans);
+}
+
+#root {
+	min-height: 100svh;
+}
+
+button,
+a {
+	font-family: inherit;
+}
+
+.hero-gradient {
+	background: var(--hero-gradient);
+}
+
+.bg-background {
+	background-color: hsl(var(--background));
+}
+
+.bg-card {
+	background-color: hsl(var(--card));
+}
+
+.bg-muted {
+	background-color: hsl(var(--muted)) !important;
+}
+
+.bg-card\/95 {
+	background-color: hsl(var(--card) / 0.95);
+}
+
+.gradient-primary {
+	background: var(--hero-gradient);
+}
